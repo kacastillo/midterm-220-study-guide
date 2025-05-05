@@ -4,9 +4,18 @@ import java.util.Map;
 public class MidtermPractice {
 
     public static void main(String[] args) {
-        // After implementing a method, call it here with
-        // some sample input and print the result to
-        // check if it works. Fix any issues you find.
+        /* QUESTION 1 */
+     // List<String> words = new ArrayList<>();
+     //    word.add("apple");
+     //      word.add("banana");
+     //      word.add("kiwi");
+     //    String longest = longestword(words);
+     //    System.out.println(longest);
+
+        /* QUESTION 3 */
+        // float[] numbers {1.5f, 3.5f, 2.0f, 3.0f};
+        // double average = findAverage(numbers);
+        // System.out.print(averages);
     }
 
     /**
@@ -16,8 +25,18 @@ public class MidtermPractice {
      * Example: input: ["apple", "banana", "kiwi"] -> output: "banana"
      */
     public static String findLongestWord(List<String> list) {
+        if (list == null || list.isEmpty()) {
         return "";
     }
+        String longest = "";
+        for (String word : list) {
+            if (word != null && word.length() > longest.length()) {
+                longest = word;
+            }
+        }
+        return longest;
+        //time: 5:47
+
 
     /**
      * Counts how many words are longer than 5 characters in the keys of a Map.
@@ -26,8 +45,10 @@ public class MidtermPractice {
      * Example: input: ["why"=7, "hello"=8, "brilliant"=99, "world"=15, "amazing"=17] -> output: 2
      */
     public static int countLongWords(Map<String, Integer> map) {
+        if (map == null || map.isEmpty()) {
         return -1;
     }
+        //unsure about this one. time: 11
 
     /**
      * Finds the average of the floats in an array.
@@ -36,9 +57,15 @@ public class MidtermPractice {
      * Example: input: [1.5, 3.5, 2.0, 3.0] -> output: 2.5
      */
     public static double findAverage(float[] arr) {
+        if (arr == null || arr.length == 0) {
         return -1.0;
     }
-
+        double sum = 0.0;
+        for (float number : arr) {
+            sum += num;
+        }
+        return sum/arr.length;
+    //time: 6:12
     /**
      * Counts how many odd numbers there are in the values of a Map.
      * @param map a HashMap of String keys and Integer values
