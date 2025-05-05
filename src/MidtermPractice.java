@@ -24,8 +24,20 @@ public class MidtermPractice {
         // Map.put("z", 5);
         // int result = countOddNumbers(Map);
         // System.out.println(result);
-        
-    }
+
+        /* QUESTION 5 */
+        // int[] test1 = {3,6,9};
+        //  int[] test2 = {3,4,6,9};
+        // System.out.println(allDivisibleBy3(test1));
+        // System.out.println(allDivisibleBy3(test2));
+
+
+        /* QUESTION 6 */
+    //     List<String> test1 = ArrayList("apple", "apricot", "avocado");
+    //     List<String> test2 = ArrayList("apple", "banana", "avocado");
+    //     System.out.println(startWith(test1);
+    //      System.out.println(startWith(test2);
+    // }
 
     /**
      * Finds the longest word in an List of Strings.
@@ -100,8 +112,14 @@ public class MidtermPractice {
      * Example 2: input: [3, 4, 6, 9] -> output: false
      */
     public static boolean allDivisibleBy3(int[] arr) {
+        for (int num : arr) {
+            if (num / 3 != 0) {
         return false;
+        }
     }
+        return true;
+    }
+        //time: 9:56
 
     /**
      * Returns true if all words start with 'a' in an ArrayList of Strings.
@@ -111,8 +129,13 @@ public class MidtermPractice {
      * Example: input: ["apple", "banana", "avocado"] -> output: false
      */
     public static boolean allStartWithA(List<String> list) {
+        for(String word : list) {
+            if(word == null || word.isEmpty() || !word.startsWith("a") {
         return false;
     }
+        }
+        return true; }
+        //time:3:51
 
     /**
      * OPTIONAL MORE CHALLENGING PROBLEM
