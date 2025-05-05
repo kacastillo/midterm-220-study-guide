@@ -4,9 +4,12 @@ import java.util.Map;
 public class MidtermPractice {
 
     public static void main(String[] args) {
-        // After implementing a method, call it here with
-        // some sample input and print the result to
-        // check if it works. Fix any issues you find.
+     List<String> words = new ArrayList<>();
+        word.add("apple");
+          word.add("banana");
+          word.add("kiwi");
+        String longest = longestword(words);
+        System.out.println(longest);
     }
 
     /**
@@ -16,8 +19,18 @@ public class MidtermPractice {
      * Example: input: ["apple", "banana", "kiwi"] -> output: "banana"
      */
     public static String findLongestWord(List<String> list) {
+        if (list == null || list.isEmpty()) {
         return "";
     }
+        String longest = "";
+        for (String word : list) {
+            if (word != null && word.length() > longest.length()) {
+                longest = word;
+            }
+        }
+        return longest;
+        //time: 5:47
+
 
     /**
      * Counts how many words are longer than 5 characters in the keys of a Map.
